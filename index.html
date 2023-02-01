@@ -33,6 +33,9 @@
                         <a class="nav-link" href="#Projekt">Projekt</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#auftraggeber">Auftraggeber</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#Team">Team</a>
                     </li>
                     <li class="nav-item">
@@ -55,7 +58,6 @@
     <!-- IMAGE -->
     <div class="container">
         <h1 class="mt-5">BPMN-Creator</h1>
-
     </div>
     <p id="Projekt"></p>
     <div class="Bild img-fluid" id="Bild">
@@ -72,7 +74,7 @@
         <hr>
         <p>Der BPMN Creator ist ein innovatives Hilfsmittel, das die Modellierung von Geschäftsprozessen
             im Team unterstützt. Die Modellierung wird dabei signifikant vereinfacht: Sie fotografieren
-            ganz einfach den am Whiteboard modellierten Prozess. Anschließend interpretiert der BPMN CREATOR
+            ganz einfach den am Whiteboard modellierten Prozess. Anschließend interpretiert der BPMN Creator
             das Bild und optimiert das generierte Modell, bevor es z. B. in den SAP Solution Manager hochgeladen wird.
         </p>
         <br>
@@ -85,6 +87,7 @@
         <li>Das digitale Prozessdiagramm wird als BPMN-XML Datei runtergeladen und kann beliebig
             weitergepflegt und dokumentiert werden.</li>
         <br>
+        <p id="auftraggeber"></p>
         <br>
         <h1 class="mt-5">Auftraggeber - Vostura</h1>
         <hr>
@@ -242,11 +245,11 @@
                 <div>
                     <div class="content">
                         <h3>Herausforderungen</h3>
-                        <li>Handschrifterkennung</li>
-                        <li>pptx-Slides ins jpeg konventieren</li>
-                        <li>Gateways mittels Bildverarbeitung - Harris Corner / Hafttransformation </li>
-                        <li>Blockboxes erkennen </li>
-                        <li>magic number und zooming</li>
+                        <li>Handschrifterkennung - Alternative zu Google-Tesseract</li>
+                        <li>pptx-Slides ins JPEG konventieren</li>
+                        <li>Handgezeichnete Gateways erkennen </li>
+                        <li>Blockboxes und Supprozesse erkennen </li>
+                        <li>Magic number und Zooming</li>
                         <br>
                     </div>
                 </div>
@@ -259,8 +262,8 @@
                         <h3>Technologien</h3>
                         <li>Java, Javascript</li>
                         <li>Maven, OpenCV</li>
-                        <li>DeepLearning4J</li>
-                        <li>Python, Jupyter Notebook, Keras, Tensorflow</li>
+                        <li>DeepLearning4J, Keras</li>
+                        <li>Python, Jupyter Notebook, Tensorflow</li>
                         <li>Git, Trello, IntelliJ</li>
                         <br>
                     </div>
@@ -276,16 +279,16 @@
                     <p>.pptx</p>
                 </div>
             </div>
-            <div class="logo" onclick="displayContent('maven')">
-                <div class="techlogo"><img id="image2" src="images/Maven.png" alt="Maven" /></div>
+            <div class="logo" onclick="displayContent('python')">
+                <div class="techlogo"><img id="image2" src="images/python.png" alt="Python" /></div>
                 <div class="techname">
-                    <p>Maven</p>
+                    <p>Handschrifterkennung</p>
                 </div>
             </div>
-            <div class="logo" onclick="displayContent('java')">
-                <div class="techlogo"><img id="image3" src="images/Java-Logo.png" alt="Java" /></div>
+            <div class="logo" onclick="displayContent('gateway')">
+                <div class="techlogo"><img id="image3" src="images/gateway.png" alt="Gateways" /></div>
                 <div class="techname">
-                    <p>Java</p>
+                    <p>Gateways</p>
                 </div>
             </div>
             <div class="logo" onclick="displayContent('springboot')">
@@ -324,56 +327,127 @@
         <br>
         <div class="row">
             <!-- pptx Erkennung und Konventierung -->
-            <div class="tab-content result-content hide" id="pptx">
-                <br><h1 class="lead"><strong>Herausforderung</strong> </h1><hr>
-                <p>Powerpoint Dokument: Eine Geschäftsprozess-Skizze als Powerpoint Dokumente in “BPMN-Creator” hochladen,
-                        das Dokument ins JPEG konventieren, das Bild ins BPMN-Modell konventieren und als BMPN File
-                        runtergeladen.
-                </p>
-                <br><h1 class="lead "><strong>Ergebnisse</strong> </h1><hr>
-                <p>Das Powerpoint kann nur mit einem Slide hochgeladen und ins Bild konventiert werden.</p><br>
-                <div class="screenhots-img" >
-                    <img scr="./images/handwritting_screen.png" >
+            <div class="tab-content result-content displayed" id="pptx">
+                <h1 class="mt-5">PowerPoint Dokumente</h1>
+                <hr>
+                <p class="lead">Als Kunde möchte ich Powerpoint Dokumente in “BPMN-Creator” hochladen,
+                    um die Möglichkeit zu haben, BPMN Modelle in PowerPoint modellieren zu können. </p><br>
+                <div class="text">
+
+                    <p><strong>Ergebnis:</strong> Der Upload von Dokumenten ist nicht nur in jpeg/jpg Format, sondern
+                        auch pptx-Format möglich.
+                        Das Konventierung vom PPTX zu JPEG findet statt. </p>
+                    <p><strong> Problemstellung:</strong> Es ist nur ein-Slide PowerPoint Dokument möglich, hochzuladen
+                        und zu konventieren.
+                        Problem liegt daran, dass das Hochladen der mehrere-Slides PowerPoint Dokumenten mit Kosten
+                        verbunden ist.,
+                        was der Auftraggeber abgelent hat.
+                    </p>
+                </div>
+                <br>
+                <div class="screenhots-img">
+                    <img scr="./images/handwritting_screen.png">
                 </div>
             </div>
-            
+
             <!-- Handschrifterkennung -->
-            <div class="tab-content result-content hide" id="maven">
-                <br><h1 class="lead"><strong>Herausforderung</strong> </h1><hr>
-                <p>Powerpoint Dokument: Eine Geschäftsprozess-Skizze als Powerpoint Dokumente in “BPMN-Creator” hochladen,
-                        das Dokument ins JPEG konventieren, das Bild ins BPMN-Modell konventieren und als BMPN File
-                        runtergeladen.
-                </p>
-                <br><h1 class="lead "><strong>Ergebnisse</strong> </h1><hr>
-                <p>Das Powerpoint kann nur mit einem Slide hochgeladen und ins Bild konventiert werden.</p><br>
-                <div class="screenhots-img" >
-                    <img scr="./images/handwritting_screen.png" >
+            <div class="tab-content result-content hide" id="python">
+                <h1 class="mt-5">Handschrifterkennung</h1>
+                <hr>
+                <p class="lead">Als Kunde möchte ich, dass der “BPMN-Creator” eine Handschrifterkennung
+                    ohne Google-Tesseract durchführen kann, um meine Daten nicht an Google weitergeben zu müssen. </p>
+
+                <div class="text">
+                    <p class="h4">Mittels Python-Bibliothek KerasOCR:</p>
+
+                    <p><strong> Grundidee:</strong> Mit Hilfe von Python-Bibliothek KerasOCR,
+                        die eine beste Alternative zu Google-Tesseract ist, und Deeplearning4J sollte
+                        das vortrainierte Modell als .h5 File abgespeichert und an BPMN Creater angebunden werden. </p>
+                    <p><strong>Problemstellung:</strong> Nach langen Recherchieren und Analysieren haben wir
+                        festgestellt, könnte die Umsetztung der US nicht vorgesetzt werden.
+                        KerasOCR konnte nicht an die App angebunden werden, weil KerasOCR nicht mit OpenCV kompatibel
+                        ist.
+                    </p>
+                </div>
+                <br>
+                <div class="screenhots-img">
+                    <img scr="./images/handwritting_screen.png">
                 </div>
             </div>
-            <!-- Java -->
-            <div class="tab-content result-content hide" id="java">
-                <br><h1 class="lead"><strong>Herausforderung</strong> </h1><hr>
-                <p>Powerpoint Dokument: Eine Geschäftsprozess-Skizze als Powerpoint Dokumente in “BPMN-Creator” hochladen,
-                        das Dokument ins JPEG konventieren, das Bild ins BPMN-Modell konventieren und als BMPN File
-                        runtergeladen.
-                </p>
-                <br><h1 class="lead "><strong>Ergebnisse</strong> </h1><hr>
-                <p>Das Powerpoint kann nur mit einem Slide hochgeladen und ins Bild konventiert werden.</p><br>
-                <div class="screenhots-img" >
-                    <img scr="./images/handwritting_screen.png" >
+            <!-- Gateways -->
+            <div class="tab-content result-content hide" id="gateway">
+                <h1 class="mt-5">Erkennung der handgezeichneten Gateways und neuen Elemente</h1>
+                <hr>
+                <p class="lead">Als Kunde möchte ich, dass der “BPMN-Creator” unabhängig
+                    von magnetischen Elementen Gateways erkennen kann, um keine Magneten mitliefern zu müssen.</p><br>
+                <p class="lead">Als Kunde möchte ich, dass der “BPMN-Creator” Blackbox Pools als Element erkennt,
+                    um die Anzahl der detektierbaren BPMN-Elemente zu erweitern.</p><br>
+                <p class="lead">Als Kunde möchte ich, dass der “BPMN-Creator” den Subprozess als Element erkennt,
+                    um die Anzahl der detektierbaren BPMN-Elemente zu erweitern.</p><br>
+                <div class="text">
+                    <p class="h4">Mittels Google Tesseract: </p>
+                    <p><strong> Grundidee:</strong> Google Tesseract sollte durch die
+                        Handschrifterkennung das “+” und “X”
+                        Symbol erkennen.</p>
+                    <p><strong>Problemstellung:</strong> die “X” und “+” Symbole werden durch Google Tesseract nicht
+                        korrekt erkannt und daher kann diese Methode nicht funktionieren.
+                        Durch die Wordlist, wo alle “X” und “+” aufgelistet werden sollten,
+                        werden sie nicht korrekt befüllt und somit ist die Ausgabe auch
+                        falsch. In dem Prozess wurde das Template Matching zur Erkennung der Gateways noch nicht
+                        beachtet,
+                        sondern der Fokus lag ausschließlich auf der Erkennung von “X” und “+”.</p><br>
+                </div>
+
+                <div class="text">
+                    <p class="h4"> Mit Harris Corner Detection:</p>
+                    <p><strong>Grundidee: </strong>Mittels OpenCV die Gateways als Rhombus erkennen und im
+                        Nachgang die darinenthaltenden “X” und “+” Symbole erkennen. Die Gateways werden mittels einer
+                        Winkelberechnung für die gegenüberliegenden Seiten berechnet und ausgegeben.
+                        Danach wurden die gegenüberliegenden Eckpunkte des Gateways ermittelt und eine
+                        Zusammenhangskomponente gebildet, um die Position der Gateways zu ermitteln. Dadurch könnte man
+                        dann auch direkt sagen, welches Gateway wäre ein "X" und welches ein "+". </p>
+                    <p><strong>Problemstellung: </strong>
+                        Dabei werden einige andere Kanten wie von Wörtern oder Kreise miterkannt.
+                        Immer wieder schwankende Eckpunkte und keine definierte Kandidatengröße.
+                    </p>
+                </div>
+
+                <div class="text">
+                    <p class="h4"> Mit Künstlicher Intelligenz: </p>
+                    <p><strong>Grundidee:</strong> mit Hilfe des Machine Learnings ein Modell zu trainieren,
+                        das handgezeichnete Gateways automatisch erkennt und klassifiziert.</p>
+                    <p> <strong>Problemstellung:</strong> Nachdem die Idee gründlich analysiert wurde, wurde
+                        festgestellt,
+                        dass wir dafür keine Zeit zur Verfügung haben, um Modell zu trainieren</p>
+                </div>
+                <br>
+                <div class="screenhots-img">
+                    <img scr="./images/handwritting_screen.png">
                 </div>
             </div>
             <!-- Springboot -->
             <div class="tab-content result-content hide" id="springboot">
-                <br><h1 class="lead"><strong>Herausforderung</strong> </h1><hr>
-                <p>Powerpoint Dokument: Eine Geschäftsprozess-Skizze als Powerpoint Dokumente in “BPMN-Creator” hochladen,
-                        das Dokument ins JPEG konventieren, das Bild ins BPMN-Modell konventieren und als BMPN File
-                        runtergeladen.
-                </p>
-                <br><h1 class="lead "><strong>Ergebnisse</strong> </h1><hr>
-                <p>Das Powerpoint kann nur mit einem Slide hochgeladen und ins Bild konventiert werden.</p><br>
-                <div class="screenhots-img" >
-                    <img scr="./images/handwritting_screen.png" >
+                <h1 class="mt-5">Magic Number</h1>
+                <hr>
+                <p class="lead">Als Kunde möchte ich keine Magic Numbers mehr im Code haben,
+                    um keine technischen Schwierigkeiten mehr zu haben,
+                    Bilder unterschiedlicher Größe zu importieren.
+                </p><br>
+
+                <div class="text">
+                    <p><strong> Grundproblem:</strong> Wird ein Bild eines BPMN hochgeladen,
+                        welches entweder ganz wenige Elemente enthält oder ganz viele,
+                        so variieren die Elemente stark von der Größe.
+                        Im Code sind viele Zahlen hinterlegt, die eingrenzen,
+                        ab was für einer Größe es eine Aktivität ist und wie groß die Fläche mindestens sein darf.
+                        Wird benötigt, damit nicht kleine Unsauberkeiten (bei zu klein)
+                        oder das gesamte Diagramm als Element gesehen wird.
+                    </p>
+                    <p><strong>Grundidee:</strong> alle Magic Numbers umwandeln in Variablen. Zoom-Faktor einführen,
+                        der für die Weiterverarbeitung genutzt und zu den Magic Numbers multipliziert wird.</p>
+                </div><br>
+                <div class="screenhots-img">
+                    <img scr="./images/handwritting_screen.png">
                 </div>
             </div>
             <!-- <div class="tab-content" id="nav-tabContent">
