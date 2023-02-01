@@ -29,14 +29,8 @@
 
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav me-auto">
-                    <!-- <li class="nav-item active">
-                        <a class="nav-link" href="#Bild">Bild</a>
-                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#Projekt">Projekt</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Arbeitsumfang">Arbeitsumfang</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#Team">Team</a>
@@ -45,9 +39,8 @@
                         <a class="nav-link" href="#Projektergebnisse">Projektergebnisse</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Video</a>
+                        <a class="nav-link" href="#Steckbrief">Steckbrief</a>
                     </li>
-
                 </ul>
             </div>
         </div>
@@ -59,11 +52,11 @@
 
 <body>
     <br>
-    <div class="container" id="Projekt">
+    <!-- IMAGE -->
+    <div class="container">
         <h1 class="mt-5">BPMN-Creator</h1>
 
     </div>
-    <!-- IMAGE -->
     <p id="Projekt"></p>
     <div class="Bild img-fluid" id="Bild">
         <img scr="" width="100%" height="650">
@@ -83,7 +76,6 @@
             das Bild und optimiert das generierte Modell, bevor es z. B. in den SAP Solution Manager hochgeladen wird.
         </p>
         <br>
-
         <p class="lead">BPMN Creator ist eine Web-Applikation zur Digitalisierung von manuell erstellten BPMN-Skizzen
             mit folgender Kernfunktionalität:</p>
         <hr>
@@ -228,7 +220,7 @@
     </div>
 
     <!-- IMAGE TOOLS -->
-    <p id="Arbeitsumfang"></p>
+    <p id="Projektergebnisse"></p>
     <div class="Technologie img-fluid" id="Technologie">
         <img scr="" width="auto" height="450">
     </div>
@@ -278,10 +270,10 @@
         </div>
 
         <div class="techn">
-            <div class="logo" onclick="displayContent('handschrift')">
-                <div class="techlogo"><img id="image1" src="images/IntelliJ.jpg" alt="IntelliJ" /></div>
+            <div class="logo" onclick="displayContent('pptx')">
+                <div class="techlogo"><img id="image1" src="images/pptx-logo.png" alt="pptx" /></div>
                 <div class="techname">
-                    <p>IntelliJ</p>
+                    <p>.pptx</p>
                 </div>
             </div>
             <div class="logo" onclick="displayContent('maven')">
@@ -302,7 +294,7 @@
                     <p>Springboot</p>
                 </div>
             </div>
-            <div class="logo">
+            <!-- <div class="logo">
                 <div class="techlogo"><img src="images/OpenCV.png" alt="OpenCV" /></div>
                 <div class="techname">
                     <p>OpenCV</p>
@@ -325,27 +317,64 @@
                 <div class="techname">
                     <p>Keras</p>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div id="textDivId"></div>
 
         <br>
         <div class="row">
-            <!-- Handschrifterkennung -->
-            <div class="tab-content hide" id="handschrift">
-                <p>Handschrifterkennung ist ein sehr schwieriges Thema gewesen</p>
+            <!-- pptx Erkennung und Konventierung -->
+            <div class="tab-content result-content hide" id="pptx">
+                <br><h1 class="lead"><strong>Herausforderung</strong> </h1><hr>
+                <p>Powerpoint Dokument: Eine Geschäftsprozess-Skizze als Powerpoint Dokumente in “BPMN-Creator” hochladen,
+                        das Dokument ins JPEG konventieren, das Bild ins BPMN-Modell konventieren und als BMPN File
+                        runtergeladen.
+                </p>
+                <br><h1 class="lead "><strong>Ergebnisse</strong> </h1><hr>
+                <p>Das Powerpoint kann nur mit einem Slide hochgeladen und ins Bild konventiert werden.</p><br>
+                <div class="screenhots-img" >
+                    <img scr="./images/handwritting_screen.png" >
+                </div>
             </div>
-            <!-- Maven -->
-            <div class="tab-content displayed" id="maven">
-                <p>Maven ist ein sehr schwieriges Thema gewesen</p>
+            
+            <!-- Handschrifterkennung -->
+            <div class="tab-content result-content hide" id="maven">
+                <br><h1 class="lead"><strong>Herausforderung</strong> </h1><hr>
+                <p>Powerpoint Dokument: Eine Geschäftsprozess-Skizze als Powerpoint Dokumente in “BPMN-Creator” hochladen,
+                        das Dokument ins JPEG konventieren, das Bild ins BPMN-Modell konventieren und als BMPN File
+                        runtergeladen.
+                </p>
+                <br><h1 class="lead "><strong>Ergebnisse</strong> </h1><hr>
+                <p>Das Powerpoint kann nur mit einem Slide hochgeladen und ins Bild konventiert werden.</p><br>
+                <div class="screenhots-img" >
+                    <img scr="./images/handwritting_screen.png" >
+                </div>
             </div>
             <!-- Java -->
-            <div class="tab-content hide" id="java">
-                <p>Java ist ein sehr schwieriges Thema gewesen</p>
+            <div class="tab-content result-content hide" id="java">
+                <br><h1 class="lead"><strong>Herausforderung</strong> </h1><hr>
+                <p>Powerpoint Dokument: Eine Geschäftsprozess-Skizze als Powerpoint Dokumente in “BPMN-Creator” hochladen,
+                        das Dokument ins JPEG konventieren, das Bild ins BPMN-Modell konventieren und als BMPN File
+                        runtergeladen.
+                </p>
+                <br><h1 class="lead "><strong>Ergebnisse</strong> </h1><hr>
+                <p>Das Powerpoint kann nur mit einem Slide hochgeladen und ins Bild konventiert werden.</p><br>
+                <div class="screenhots-img" >
+                    <img scr="./images/handwritting_screen.png" >
+                </div>
             </div>
             <!-- Springboot -->
-            <div class="tab-content hide" id="springboot">
-                <p>Springboot ist ein sehr schwieriges Thema gewesen</p>
+            <div class="tab-content result-content hide" id="springboot">
+                <br><h1 class="lead"><strong>Herausforderung</strong> </h1><hr>
+                <p>Powerpoint Dokument: Eine Geschäftsprozess-Skizze als Powerpoint Dokumente in “BPMN-Creator” hochladen,
+                        das Dokument ins JPEG konventieren, das Bild ins BPMN-Modell konventieren und als BMPN File
+                        runtergeladen.
+                </p>
+                <br><h1 class="lead "><strong>Ergebnisse</strong> </h1><hr>
+                <p>Das Powerpoint kann nur mit einem Slide hochgeladen und ins Bild konventiert werden.</p><br>
+                <div class="screenhots-img" >
+                    <img scr="./images/handwritting_screen.png" >
+                </div>
             </div>
             <!-- <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="list-home" role="tabpanel"
@@ -356,11 +385,15 @@
                     <p>Springboot ist ein sehr schwieriges Thema gewesen</p>
                 </div>
             </div> -->
+            <br>
+
         </div>
     </div>
     <br>
 
-    <div class="container" id="Projekt">
+    <!-- STECKBRIEF -->
+    <p id="Steckbrief"></p>
+    <div class="container">
         <br>
         <h1 class="mt-5">Steckbrief</h1>
         <hr>
