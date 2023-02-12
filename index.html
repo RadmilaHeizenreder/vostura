@@ -43,7 +43,8 @@
                         <a class="nav-link" href="#Projektergebnisse">Projektergebnisse</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/images/steckbrief_vostura.pdf" target="_blank" style="color: #29a4b2;">Steckbrief</a>
+                        <a class="nav-link" href="/images/steckbrief_vostura.pdf" target="_blank"
+                            style="color: #29a4b2;">Steckbrief</a>
                     </li>
                 </ul>
             </div>
@@ -120,7 +121,8 @@
     <div class="container">
         <br>
         <h1 class="mt-5">Team</h1>
-        <p class="lead">Studentinnen der HTW Berlin: Rada, Verena, Dilek, Isabell, Elsa, Melda (auf dem Bild von links nach rechts)</p>
+        <p class="lead">Studentinnen der HTW Berlin: Rada, Verena, Dilek, Isabell, Elsa, Melda (auf dem Bild von links
+            nach rechts)</p>
         <hr>
         <div class="con">
 
@@ -207,7 +209,7 @@
                 <div class="face face2">
                     <div class="content">
                         <h5><b>Rolle: SM & Entwicklerin</b> </h5>
-                        <p>Sie ist schnell und achtet auf Details. 
+                        <p>Sie ist schnell und achtet auf Details.
                             Sie ist sehr kreativ und trägt zur Umsetzung bei.</p>
                         <a target="_blank" class="Link"
                             href="https://www.linkedin.com/in/dilek-ogur-2aa769235/">LinkedIn</a>
@@ -251,37 +253,27 @@
             Zudem sollte die intern mit Python entwickelte Handschrifterkennung im
             Backend (Java) etabliert und die Erkennung der Gateways optimiert werden.
             Außerdem sollte der BPMN Creator PowerPoint Dokumente importieren und bearbeiten können.</p>
-            <p> Hier findest du die Herausforderungen und Technologien, die wir in diesem Projekt
+        <p> Hier findest du die Herausforderungen und Technologien, die wir in diesem Projekt
             erarbeitet und genutzt haben.
         </p>
         <br>
-        <div class="con">
-            <div class="col">
-                <div>
-                    <div class="content">
-                        <h3>Herausforderungen</h3>
-                        <li>pptx-Slides ins JPEG konventieren</li>
-                        <li>Handschrifterkennung - Alternative zu Google Tesseract</li>
-                        <li>Erkennen der (neuen) BPMN Elemente </li>
-                        <li>Magic Number und Zoom-Faktor</li>
-                        <br>
-                    </div>
-                </div>
+        <div class="content-listed">
+            <div class="list">
+                <h3>Herausforderungen</h3>
+                <li>pptx-Slides ins JPEG konventieren</li>
+                <li>Handschrifterkennung - Alternative zu Google Tesseract</li>
+                <li>Erkennen der (neuen) BPMN Elemente </li>
+                <li>Magic Number und Zoom-Faktor</li>
+                <br>
             </div>
-            <div class="col">
-            </div>
-            <div class="col">
-                <div>
-                    <div class="content">
-                        <h3>Technologien</h3>
-                        <li>Git, Trello, IntelliJ</li>
-                        <li>Java, Javascript</li>
-                        <li>Maven, OpenCV</li>
-                        <li>Python, Jupyter Notebook</li>
-                        <li>DeepLearning4J, Keras, Tensorflow</li>
-                        <br>
-                    </div>
-                </div>
+            <div class="list">
+                <h3>Technologien</h3>
+                <li>Git, Trello, IntelliJ</li>
+                <li>Java, Javascript</li>
+                <li>Maven, OpenCV</li>
+                <li>Python, Jupyter Notebook</li>
+                <li>DeepLearning4J, Keras, Tensorflow</li>
+                <br>
             </div>
             <br>
         </div>
@@ -327,16 +319,11 @@
                         um die Möglichkeit zu haben, BPMN Modelle in PowerPoint modellieren zu können. </p>
                 </div>
                 <div class="text">
-                    <p><strong>Ergebnis:</strong> Es besteht die Möglichkeit, in Präsentationen erstellte
-                        Geschäftsprozessmodelle
-                        hochladen zu können. Somit werden neben jpeg/jpg, auch ppt/pptx Formate beim
-                        Dokumentenupload zugelassen. Die Präsentation wird mithilfe der API groupdocs das
-                        ppt/pptx-Format erst einmal in eine jpeg/jpg-Datei umgewandelt.
-                        Dann durchläuft die umgewandelte Datei genau die gleichen
-                        Schritte, wie wenn eine jpeg/jpg-Datei hochgeladen wird. </p>
-                    <p><strong> Problemstellung:</strong> Zurzeit ist es nur möglich, eine Präsentation mit genau <i> einer</i>
-                        Folie hochzuladen.
-                        Sollte der Bedarf sich ändern, könnte dies nachimplementiert werden.
+                    <p>Es besteht die Möglichkeit, in Präsentationen erstellte Geschäftsprozessmodelle hochzuladen.
+                        Neben jpeg/jpg werden daher auch ppt/pptx Formate für den Dokumentenupload akzeptiert. Die
+                        Präsentation wird zunächst mit Hilfe der groupdocs API vom ppt/pptx Format in eine jpeg/jpg
+                        Datei konvertiert, danach durchläuft die konvertierte Datei genau die gleichen Schritte wie beim
+                        Upload einer jpeg/jpg Datei.
                     </p>
                 </div>
                 <br>
@@ -388,24 +375,14 @@
                 </div>
                 <div class="text">
 
-                    <p class="h4">Mittels Python-Bibliothek KerasOCR:</p>
-                    <p>Zurzeit wird die Handschrifterkennung innerhalb der Webanwendung mit Hilfe von Google Tesseract gelöst. 
-                        Sobald eine Datei hochgeladen wird, wird sie an Google gesendet, wo die Handschrifterkennung durchgeführt wird. 
-                        Für viele Unternehmen besteht hier ein Compliance und datenschutzrechtiliches Problem. 
-                        Daher wird Google Tesseract durch eine eigene Lösung ersetzt.
-                     </p>
 
-                    <p><strong> Grundidee:</strong> Die Python-Bibliothek KerasOCR,
-                        welche eine der besten Alternative zu Google Tesseract ist, sollte mit Hilfe von Deeplearning4J
-                        das vortrainierte Modell als .h5 File abgespeichert und an BPMN Creater angebunden werden. 
-                        Weiterhin wurde die Rechtschreibung korrigiert, dass die Wörter die zusammen gehören 
-                        als ein Wort aufgelistet werden. Dies ist aktuell nur in englischer Sprache möglich, 
-                        weil es kein deutsches Wörterbuch gibt.</p>
-                    <p><strong>Problemstellung:</strong> Nach langen Recherchen und Analysen sind wir zu dem Schluss gekommen, 
-                        dass die Umsetzung der US nicht fortgesetzt werden kann.
-                        Die Bibliothek von Keras OCR kann nicht an die App angebunden werden, 
-                        weil OpenCV(Java) und KerasOCR nicht miteinander kompatibel sind.
-                    </p>
+                    <p>Zurzeit wird die Handschrifterkennung innerhalb der Webanwendung mit Hilfe von Tesseract OCR
+                        gelöst. Beim Hochladen einer Datei wird diese zur Handschrifterkennung an Google gesendet. Für
+                        viele Unternehmen stellt dies ein Compliance- und Datenschutzproblem dar. Daher wird Tesseract
+                        OCR durch eine eigene Lösung ersetzt.</p>
+                    <p>Die unabhängig von der Webanwendung implementierte Handschrifterkennung kann nun die Handschrift
+                        zuverlässig erkennen und korrigieren. Sie wurde mithilfe von Keras OCR in der Programmiersprache
+                        Python entwickelt.</p>
                 </div>
                 <br>
                 <!-- Carousel -->
@@ -443,96 +420,57 @@
                 </div>
                 <div class="text">
                     <p class="h4">Gatewayerkennung: </p>
-                    <p>In der BPMN Notation zählen Gateways mit zu den zentralsten Elemente. Das Problem hierbei ist,
-                         dass der Code nur nahezu perfekt gezeichnete Gateways erkennt.
-                        Daher werden aktuell Magnetschablonen mitgeschickt, damit die Gateways die richtigen Seitenverhältnisse 
-                        haben. Ein weiteres Problem, besteht in der Unterscheidung zwischen den verschiedenen Gatewaytypen. 
-                        Dies wird aktuell mit Hilfe eines Template Matching gelöst.
-                        Aufgrund des größeren Aufwands,
-                        welcher sich ergibt, wenn die Magnetschablonen erstellt und
-                        mitgeschickt werden müssen, ist es von Bedeutung
-                        die Webanwendung so zu verbessern, dass auch handgezeichnete
-                        Gateways erkannt werden können.</p>
+                    <p>Gateways werden in der BPMN-Notation als Rauten mit einem Symbol +, X dargestellt. Im
+                        Ausgangscode des BPMN-Creators werden nur perfekt gezeichnete Gateways sehr gut erkannt, was nur
+                        mit mitgelieferten Magnetschablonen gewährleistet werden kann. Aufgrund des erhöhten Aufwands,
+                        der durch die Erstellung und den Versand der Magnetschablonen entsteht, ist es von Bedeutung,
+                        die Webanwendung so zu verbessern, dass auch handgezeichnete Gateways erkannt werden können.</p>
                     <div class="text">
-                        <p><strong>OpenCV:</strong> Die Grundidee besteht darin, dass die Gateways
+                        <p><strong>OpenCV:</strong> Die erste Idee, welche es ermöglichen soll, handgezeichnete Gateways
+                            zu erkennen, ist die Harris Corner Detection. Dies kann mithilfe von
+                            OpenCV umgesetzt werden.</p>
                         <div class="text">
-                            <li><strong> Harris Corner Detection:</strong> Der erste Schritt ist, welcher es ermöglichen soll
-                                handgezeichnete Gateways zu erkennen, ist die Harris Corner Detection.
-                                Dies kann mit OpenCV umgesetzt werden. OpenCV ist eine Bibliothek, welche verschiedene Services 
-                                und Methoden für die Bildverarbeitung zur Verfügung stellt.</li>
-                            <li><strong>Google Tesseract:</strong> Der zweite Schritt besteht in der Lokalisierung
-                                von einzelstehenden „+“ und „x“ Symbolen.
-                                Google Tesseract sucht die gewünschten Symbole raus und lokalisiert diese.
-                                Die Koordinaten werden abgespeichert und geschaut, dass im näheren Umfeld keinerlei
-                                andere Zeichen vorhanden sind. Ist dies der Fall, handelt es sich um ein xAND-Gateway
-                                („+“ Symbol) oder um ein xOR-Gateway („x“ Symbol).</li><br>
-                            <p>Probleme die durch diese Variante entstehen, sind die Falscherkennungen
-                                des „x“s, denn dieses wird bei handgeschriebenen Gateways meistens
-                                als „+“ erkannt. Außerdem könnte sich durch dieses Vorgehen
-                                im späteren Entwicklungsprozess ein Nachteil ergeben, sollte es
-                                zum Beispiel weitere Elemente geben, die in ihrer Abbildung ein „+“
-                                enthalten. Subprozesse werden in der Regel mit einem „+“ in einem
-                                kleinen Rechteck gezeichnet, weshalb dies den Nachteil schon einmal
-                                bestärken würde.</p>
+                            <li><strong> Harris Corner Detection:</strong> Der erste Schritt ist die Kantenerkennung,
+                                wobei Kanten nach bestimmten Kriterien gefiltert werden. Im zweiten Schritt werden
+                                die gefundenen Ecken nach bestimmten Kriterien gefiltert. Die Ergebnisse dieser beiden
+                                Schritte werden dann in einem
+                                dritten Schritt miteinander kombiniert, um die handgezeichneten Gateways zu finden.</li>
+                            <br>
+                            <li><strong>Google Tesseract:</strong> Sobald die gefundenen Gateways erkannt werden,
+                                sollten sie
+                                nach den verschiedenen Gatewaytypen gefiltert werden. Es ist somit essentiell, dass
+                                erkannt werden kann, ob es sich bei dem gefundenen Gateway um ein xAND-Gateway
+                                („+“-Symbol) oder ein xOR-Gateway („x“-Symbol) handelt. “Tesseract-OCR” oder eine eigene
+                                Lösung zur Handschrifterkennung können dabei helfen.</li>
                         </div>
-
-                        <p><strong>Machine Learning:</strong> Um eine zuverlässige Erkennung und Lokalisierung
-                            von Gateways und sogar anderen BPMN-Elementen zu ermöglichen, ist Machine Learning
-                            eine gute Wahl. Für das maschinelle Lernen wird ein Modell implementiert,
-                            welche versuchen Muster in übergebenen Daten zu finden. Diese Daten, auch
-                            Trainingsdaten genannt, bilden verschieden handschriftlich gezeichnete Gateways dar.
-                            Zusätzlich werden die einzelnen Daten eingeordnet, mithilfe von Labels.
-                            Die Labels repräsentieren hierbei die verschiedenen Klassen, welche mit dem Namen
-                            des BPMN-Elements beschriftet werden. Die Trainingsdaten werden den verschiedenen
-                            Klassen jeweils zugeordnet.
-                            Aufgrund von einer großen Anzahl an benötigten Daten, welche für das trainieren
-                            von machine learning Modellen essenziell sind, müssen mehrere Hunderte Gateways
-                            einzeln handgezeichnet werden. Eine Vielzahl an handgezeichneten Gateways gibt
-                            es leider nicht herunterzuladen. Um diesen Aufwand zu minimieren, wird eine Sammlung
-                            handgezeichneter Rauten als Trainingsdaten verwendet, welche kostenlos
-                            heruntergeladen werden können.
-                        </p><br>
+                        <p><strong>Machine Learning:</strong> Um eine zuverlässige Erkennung und Lokalisierung von
+                            Gateways und sogar anderen BPMN-Elementen zu ermöglichen, ist Machine Learning eine weitere
+                            Option. Als erstes wird ein Bildklassifizierungsmodell trainiert, welches helfen soll
+                            Gateways von den weiteren Elementen zu unterscheiden. Daraufhin folgt das trainieren eines
+                            Objekterkennungsmodells, welches auf der Bildklassifizierung aufbaut. Die Objekterkennung
+                            dient dazu, die Gateways in den Bildern zu lokalisieren. </p>
                     </div>
                 </div>
-
-
                 <div class="text">
                     <p class="h4"> Subprozesserkennung:</p>
-                    <p>Subprozesse werden in der BPMN-Notation als Rechteck mit Text dargestellt,
-                        welches an der unteren Kante und innerhalb des Elements ein weiteres Rechteck mit einem „+“
-                        besitzt.</p>
-                    <div class="text">
-                        <p><strong>Grundidee: </strong>Die Grundidee zum Erkennen des Subprozess Elements besteht darin, 
-                            das kleinere, innere Rechteck zu lokalisieren. In der Ausgangsversion der Webanwendung werden 
-                            Rechtecke zuverlässig erkannt. Wird ein Rechteck lokalisiert, wird es automatisch 
-                            als Aktivität ausgezeichnet. Nutzt man diese vorhandene Funktion, sucht man 
-                            alle Rechtecke in dem Geschäftsprozess und schaut daraufhin, 
-                            ob sich in dem Rechteck noch ein weiteres Rechteck befindet. 
-                            Um die Sicherheit zu gewährleisten, dass es sich tatsächlich um einen Subprozess handelt, 
-                            wird geschaut, ob die Höhe bei Y der unteren Kante des größeren Rechtecks, 
-                            mit der Höhe bei Y der unteren Kante des kleineren Rechtecks übereinstimmt. 
-                            So ist Yrechteck1 == Yrechteck2 und kann als Subprozess übernommen werden. </p>
-                    </div>
-
+                    <p>Subprozesse werden in der BPMN-Notation als Rechteck mit Text dargestellt, an dessen unteren
+                        Kante und innerhalb des Elements sich ein weiteres Rechteck mit einem „+“ befindet.</p>
+                    <p>In der Ausgangsversion der Webanwendung werden Rechtecke zuverlässig erkannt. Nutzt man diese
+                        vorhandene Funktion, sucht man alle Rechtecke im Geschäftsprozess und schaut daraufhin, ob
+                        sich in dem Rechteck noch ein weiteres Rechteck befindet. Um sicherzustellen, dass es sich
+                        tatsächlich um einen Subprozess handelt, wird geprüft, ob die Höhe bei Y der unteren Kante
+                        des größeren Rechtecks mit der Höhe bei Y der unteren Kante des kleineren Rechtecks
+                        übereinstimmt. Somit ist YRechteck1 == YRechteck2 und kann als Subprozess übernommen werden.
+                    </p>
                 </div>
                 <div class="text">
                     <p class="h4"> Blackboxerkennung:</p>
-                    <p>Blackboxes sind geschlossene Pools, welche einen nicht ersichtlichen Geschäftsprozess darstellen.
-                        Sie werden als großes Rechteck außerhalb des zu modellierenden Prozesses modelliert.
-                        Schon in der Ausgangsversion werden Rechtecke zuversichtlich erkannt.
-                        Diese werden direkt als Aktivitäten abgespeichert.</p>
-                    <div class="text">
-                        <p><strong>Grundidee: </strong>Die Grundidee ist, alle Rechtecke im hochgeladenen 
-                            Geschäftsprozessmodells zu finden und daraufhin die Größe der Rechtecke zu ermitteln. 
-                            Ist ein gewähltes Rechteck, im Verhältnis viel größer, 
-                            als die anderen gefundenen Rechtecke, so handelt es sich um eine Blackbox.
-                        </p>
-                        <p><strong>Problemstellung: </strong>
-                            Dabei werden einige andere Kanten wie von Wörtern oder Kreise miterkannt.
-                            Immer wieder schwankende Eckpunkte und keine definierte Kandidatengröße.
-                        </p>
-                    </div>
-
+                    <p>Blackboxes sind geschlossene Pools, die einen nicht sichtbaren Geschäftsprozess darstellen. Sie
+                        werden als großes Rechteck außerhalb des zu modellierenden Prozesses abgebildet. Bereits in der
+                        Ausgangsversion werden Rechtecke zuverlässig erkannt.
+                        Ist ein erkanntes Rechteck, ein Drittel größer als die anderen gefundenen Rechtecke, handelt es
+                        sich um eine Blackbox.
+                    </p>
                 </div>
                 <br>
                 <!-- Carousel -->
@@ -541,7 +479,7 @@
                             arrow_back_ios
                         </span></a>
                     <div class="mySlides">
-                        <img src="images/screens/Gatewayserkennung1.png" alt="Canyon at Nigh" style="width:100%">
+                        <img src="images/screens/Gatewayerkennung.png" style="width:100%">
                         <div class="slide-content">
                             <br>
                             <h5>Position ermitteln</h5>
@@ -549,7 +487,7 @@
                         </div>
                     </div>
                     <div class="mySlides">
-                        <img src="images/screens/Gatewayerkennung.png" style="width:100%">
+                        <img src="images/screens/Gatewayserkennung1.png" style="width:100%">
                         <div class="slide-content">
                             <br>
                             <h5>Gateways erkennen</h5>
@@ -561,14 +499,6 @@
                         <div class="slide-content">
                             <br>
                             <h5>Winkelberechnung</h5>
-                            <p></p>
-                        </div>
-                    </div>
-                    <div class="mySlides">
-                        <img src="images/screens/Grau_.png" style="width:100%">
-                        <div class="slide-content">
-                            <br>
-                            <h5>Grau</h5>
                             <p></p>
                         </div>
                     </div>
@@ -590,32 +520,35 @@
                 </div>
 
                 <div class="text">
-                    <p><strong> Grundproblem:</strong> Wird ein Bild eines BPMN hochgeladen,
-                        welches entweder ganz wenige Elemente enthält oder ganz viele,
-                        so variieren die Elemente stark von der Größe.
-                        Im Code sind viele Zahlen hinterlegt, die eingrenzen,
-                        ab was für einer Größe es eine Aktivität ist und wie groß die Fläche mindestens sein darf.
-                        Wird benötigt, damit nicht kleine Unsauberkeiten (bei zu klein)
-                        oder das gesamte Diagramm als Element gesehen wird.
+                    <p>Im Ausgangscode des BPMN Creators sind mehrere Magic Numbers enthalten.
+                        Beim Hochladen eines Bildes mit einer großen Anzahl von Elementen erscheinen die Elemente auf
+                        dem Bild kleiner als auf einem Bild mit wenigen Elementen. Bei den Magic Numbers wird jedoch
+                        davon ausgegangen, dass alle Elemente ungefähr gleich groß sind. Dies führt in der Anwendung
+                        dazu, dass bei Bildern mit einer unterschiedlichen Anzahl von BPMN-Elementen viele Elemente von
+                        der Anwendung nicht erkannt werden.
+
                     </p>
-                    <p><strong>Grundidee:</strong> alle Magic Numbers umwandeln in Variablen. Zoom-Faktor einführen,
-                        der für die Weiterverarbeitung genutzt und zu den Magic Numbers multipliziert wird.</p>
+                    <p>Es wird ein Preprocessing durchgeführt, bei dem zunächst der durchschnittliche Radius eines
+                        Kreises bestimmt und mit dem Radius des tatsächlichen Kreises verglichen wird. Infolgedessen
+                        wird ein Zoom-Faktor berechnet, um die Größenverhältnisse der verschiedenen
+                        Geschäftsprozessmodelle ausgleichen zu können.
                 </div><br>
                 <!-- Carousel -->
                 <div class="slideshow-container" id="slider1">
                     <a class="prev" onclick="plusSlides(-1,'slider1')"><span class="material-symbols-outlined">
                             arrow_back_ios
                         </span></a>
-                        <div class="mySlides">
-                            <img src="images/screens/Bildschirmfoto 2023-02-02 um 12.02.37.png" style="width:100%">
-                            <div class="slide-content">
-                                <br>
-                                <h5>Originalbild</h5>
-                                <p></p>
-                            </div>
-                        </div>
                     <div class="mySlides">
-                        <img src="images/screens/Bildschirmfoto 2023-02-02 um 12.02.24.png" alt="Canyon at Nigh" style="width:100%">
+                        <img src="images/screens/Bildschirmfoto 2023-02-02 um 12.02.37.png" style="width:100%">
+                        <div class="slide-content">
+                            <br>
+                            <h5>Originalbild</h5>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="images/screens/Bildschirmfoto 2023-02-02 um 12.02.24.png" alt="Canyon at Nigh"
+                            style="width:100%">
                         <div class="slide-content">
                             <br>
                             <h5>Fehlerhaft umgewandeltes Bild</h5>

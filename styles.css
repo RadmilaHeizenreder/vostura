@@ -109,6 +109,21 @@ body {
     flex-grow: 1;
     flex-basis: 33%;
 }
+.list {
+    background-color: #9bd3d9;
+    margin: 0px;
+    padding: 20px;
+    flex-grow: 2;
+    flex-basis: 50%;
+}
+
+.content-listed {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: auto;
+    margin-left: 10%;
+}
 
 .con .col {
     cursor: pointer;
